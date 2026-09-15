@@ -62,6 +62,13 @@ a:hover {
   color: var(--sage);
 }
 
+code {
+  font-size: 0.92em;
+  background: var(--sage-pale);
+  padding: 0.08em 0.38em;
+  border-radius: 6px;
+}
+
 :focus-visible {
   outline: 3px solid var(--gold);
   outline-offset: 3px;
@@ -88,21 +95,22 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--warn-bg);
-  color: var(--warn-ink);
-  border-bottom: 1px solid var(--gold-soft);
+  background: var(--sage-deep);
+  color: var(--paper);
+  border-bottom: 1px solid rgba(250, 246, 238, 0.12);
 }
 
 .site-disclaimer p {
   margin: 0 auto;
   max-width: var(--max);
-  padding: 0.7rem 1.25rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.98rem;
   line-height: 1.45;
 }
 
 .site-disclaimer strong {
   font-weight: 700;
+  color: var(--gold-soft);
 }
 
 /* Header */
@@ -165,10 +173,14 @@ a:hover {
   font-size: 0.98rem;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
+.site-nav a:hover {
   background: var(--sage-pale);
   color: var(--sage-deep);
+}
+
+.site-nav a[aria-current="page"] {
+  background: var(--sage-deep);
+  color: var(--paper);
 }
 
 .nav-toggle {
@@ -299,6 +311,16 @@ main {
 .figure img {
   width: 100%;
   background: #f7f3ea;
+}
+
+.figure-focus-low img {
+  max-height: 22rem;
+  object-fit: cover;
+  object-position: center 78%;
+}
+
+.mt {
+  margin-top: 1.25rem;
 }
 
 .figure figcaption {
