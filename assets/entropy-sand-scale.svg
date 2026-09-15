@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" width="1600" height="820" role="img" aria-labelledby="chartTitle chartDesc">
+  <title id="chartTitle">Scales of chance: one grain, GSE, and SOU</title>
+  <desc id="chartDesc">Three labeled steps. 1: one tiny grain of sand. 2: GSE = 10^18, all grains of sand on Earth. 3: SOU = 10^22, stars in the observable universe. A note says GSE times SOU is only about the 12-word ballpark; 24-word is vastly larger.</desc>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf6ee"/>
+      <stop offset="100%" stop-color="#f3eee4"/>
+    </linearGradient>
+    <radialGradient id="grainShine" cx="38%" cy="34%" r="70%">
+      <stop offset="0%" stop-color="#ead7b0"/>
+      <stop offset="100%" stop-color="#b0893a"/>
+    </radialGradient>
+    <radialGradient id="earthSea" cx="34%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#c9d4c2"/>
+      <stop offset="100%" stop-color="#7f9176"/>
+    </radialGradient>
+    <radialGradient id="starSky" cx="36%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#54644d"/>
+      <stop offset="100%" stop-color="#3c4a38"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="820" fill="url(#paper)"/>
+
+  <text x="800" y="64" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" letter-spacing="5" fill="#6a7c61">SCALES OF CHANCE</text>
+
+  <!-- Column 1 -->
+  <g transform="translate(267 310)">
+    <circle r="130" fill="#faf6ee" stroke="#d4ddcc" stroke-width="2"/>
+    <path d="M-22 8 L-18 -28 C-14 -56 14 -56 18 -28 L22 8 Z" fill="#e8e0d0" stroke="#8a7d64" stroke-width="2.4"/>
+    <ellipse cx="0" cy="10" rx="24" ry="8" fill="#d8cbb0" stroke="#8a7d64" stroke-width="2.4"/>
+    <circle cx="-7" cy="-22" r="2" fill="#8a7d64" opacity="0.4"/>
+    <circle cx="6" cy="-16" r="2" fill="#8a7d64" opacity="0.4"/>
+    <circle cx="-3" cy="-4" r="2" fill="#8a7d64" opacity="0.4"/>
+    <circle cx="8" cy="0" r="2" fill="#8a7d64" opacity="0.4"/>
+    <circle cx="42" cy="52" r="8" fill="url(#grainShine)" stroke="#8a6a28" stroke-width="1"/>
+    <text x="42" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#545d4e">one&#160;grain</text>
+  </g>
+
+  <!-- Column 2 -->
+  <g transform="translate(800 310)">
+    <circle r="130" fill="#faf6ee" stroke="#d4ddcc" stroke-width="2"/>
+    <circle r="86" fill="url(#earthSea)" stroke="#6a7c61" stroke-width="2"/>
+    <path d="M-54 -8 C-28 -48 18 -50 40 -16 C22 6 -8 10 -30 4 C-46 2 -58 8 -54 -8Z" fill="#3c4a38"/>
+    <path d="M6 16 C30 4 62 20 58 46 C30 64 4 50 -8 34 C-2 24 0 20 6 16Z" fill="#6a7c61"/>
+    <path d="M-70 8 C-76 30 -50 58 -20 50 C-34 28 -54 16 -70 8Z" fill="#7c8e70"/>
+    <circle cx="-18" cy="-40" r="12" fill="#6a7c61"/>
+    <ellipse cx="0" cy="0" rx="86" ry="20" fill="none" stroke="#faf6ee" stroke-width="1.2" opacity="0.35"/>
+  </g>
+
+  <!-- Column 3 -->
+  <g transform="translate(1333 310)">
+    <circle r="130" fill="#faf6ee" stroke="#d4ddcc" stroke-width="2"/>
+    <circle r="86" fill="url(#starSky)" stroke="#3c4a38" stroke-width="2"/>
+    <g fill="#faf6ee">
+      <circle cx="-38" cy="-30" r="2.6"/>
+      <circle cx="-6" cy="-48" r="1.8"/>
+      <circle cx="24" cy="-32" r="3"/>
+      <circle cx="44" cy="-8" r="1.7"/>
+      <circle cx="30" cy="20" r="2.4"/>
+      <circle cx="0" cy="8" r="1.8"/>
+      <circle cx="-42" cy="14" r="2.2"/>
+      <circle cx="-22" cy="40" r="1.7"/>
+      <circle cx="14" cy="44" r="2.6"/>
+      <circle cx="48" cy="30" r="1.6"/>
+      <circle cx="-50" cy="-6" r="1.5"/>
+      <circle cx="8" cy="-12" r="1.6"/>
+      <circle cx="-16" cy="-8" r="2"/>
+      <circle cx="36" cy="-44" r="1.5"/>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M430 310 H545" fill="none" stroke="#6a7c61" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M532 298 l16 12 -16 12" fill="#6a7c61"/>
+  <path d="M1055 310 H1170" fill="none" stroke="#6a7c61" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M1157 298 l16 12 -16 12" fill="#6a7c61"/>
+
+  <!-- Labels: no tspans, caret notation, explicit spaces -->
+  <text x="267" y="490" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#3c4a38">1.&#160;One&#160;grain</text>
+  <text x="267" y="526" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#545d4e">(tiny)</text>
+
+  <text x="800" y="490" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#3c4a38">2.&#160;GSE&#160;=&#160;10^18</text>
+  <text x="800" y="526" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#545d4e">all&#160;grains&#160;of&#160;sand&#160;on&#160;Earth</text>
+
+  <text x="1333" y="490" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#3c4a38">3.&#160;SOU&#160;=&#160;10^22</text>
+  <text x="1333" y="526" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#545d4e">stars&#160;in&#160;the&#160;observable&#160;universe</text>
+
+  <line x1="480" y1="580" x2="1120" y2="580" stroke="#d4ddcc" stroke-width="1.5"/>
+
+  <text x="800" y="630" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#545d4e">Even&#160;GSE&#160;x&#160;SOU&#160;~&#160;10^40&#160;is&#160;only&#160;~12-word&#160;ballpark.</text>
+  <text x="800" y="662" text-anchor="middle" xml:space="preserve" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#545d4e">24-word&#160;is&#160;vastly&#160;larger.</text>
+</svg>

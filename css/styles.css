@@ -307,15 +307,29 @@ main {
   overflow: hidden;
 }
 
-.figure img {
+.figure img,
+.figure svg {
   width: 100%;
+  height: auto;
   background: #f7f3ea;
+  object-fit: contain;
 }
 
-.figure-focus-low img {
-  max-height: 22rem;
-  object-fit: cover;
-  object-position: center 78%;
+.zeros-decimal {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(1.2rem, 3.4vw, 1.85rem);
+  line-height: 1.45;
+  letter-spacing: 0.08em;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.15rem 1.25rem 1.3rem;
+  box-shadow: var(--shadow);
+  color: var(--sage-deep);
+  margin: 0.85rem 0 0.55rem;
+  max-width: 48rem;
 }
 
 .mt {

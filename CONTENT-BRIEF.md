@@ -16,12 +16,11 @@ Educational SEO site. Pleasant sage/cream vibes. Teach process only — **never 
 - Going from 12→24 words is not “twice as strong”; each extra bit **doubles** the search space. +128 bits ≈ **2^128 times** more possibilities (~10^38×).
 
 ### Metaphor (sandbox → cosmos)
-Order-of-magnitude anchors (approximate, for intuition):
-- Grains of sand on Earth: ~10^18–10^20
-- Stars in the observable universe: ~10^22–10^24
-- Human cells across all living people (ballpark): ~10^30
+Locked teaching numbers (order-of-magnitude, not lab measurements):
+- **GSE** = all grains of sand on Earth = **10^18** (show 1 + 18 zeros)
+- **SOU** = stars in the observable universe = **10^22** (show 1 + 22 zeros)
 
-So **2^128 (~10^38)** is already far beyond “all the sand on Earth,” and even beyond “sand × stars × a huge pile of cells” in casual storytelling — say it carefully: *if you multiplied all the sand on Earth by all known stars and still multiplied by a generous estimate of all human cells on the planet, you’d still be short of the size of a 12-word seed space.* Then: **24 words (~10^77)** is roughly **another full 12-word universe** larger than that — not double, but ~10^38 times larger again.
+GSE alone is tiny next to 2^128. SOU alone is still far short of 2^128. **GSE × SOU = 10^40** is only about the same ballpark as a 12-word seed (~3.4×10^38) — slightly larger, not a different universe. Then: **24 words (~10^77)** is roughly **another full 12-word universe** larger than 12 words — not double, but ~10^38 times larger again. Drop cells from the main comparison.
 
 ### Multisig odds (intuition, not a single formula)
 Multisig does not replace seed strength; it changes **who must cooperate**. Example 2-of-3: an attacker needs **two** independent keys (or to compromise two devices/people), not one. Explain as layered control, with calm copy.
@@ -30,6 +29,8 @@ Multisig does not replace seed strength; it changes **who must cooperate**. Exam
 - 5-pack example: https://www.amazon.com/dp/B00CKXGBE4 (Brybelly professional casino dice set of 5)
 - Alternate 5-pack: https://www.amazon.com/dp/B005OLV568
 Prefer linking a set of **5** (enough for base-6 entropy workflows) and note people often buy **two sets (10 dice)** for faster rolling. Do not invent other product claims.
+
+Teach the offline process on `dice.html`: roll in private, record faces, never photograph into a cloud album, never type rolls into a website. Mapping dice entropy to BIP39 words must happen on an offline / air-gapped tool the reader already trusts. SeedSigner (https://seedsigner.com/) is one educational example of air-gapped Bitcoin signing / seed tooling that can include dice-to-mnemonic flows — not an endorsement or affiliate. Warn against random websites, browser extensions, and online “dice to seed” tools. Never add a converter on this site.
 
 ## Images (attached / in uploads)
 Use as hero/section art:
