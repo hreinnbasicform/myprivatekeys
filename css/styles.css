@@ -20,8 +20,8 @@
   --radius: 22px;
   --max: 72rem;
   --prose: 40rem;
-  --font-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-  --font-sans: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-serif: Georgia, ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
 *,
@@ -227,8 +227,7 @@ main {
 .card h3,
 .stat h3 {
   font-family: var(--font-serif);
-  font-optical-sizing: auto;
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.15;
   color: var(--sage-deep);

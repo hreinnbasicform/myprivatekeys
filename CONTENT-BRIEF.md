@@ -26,7 +26,7 @@ So **2^128 (~10^38)** is already far beyond “all the sand on Earth,” and eve
 ### Multisig odds (intuition, not a single formula)
 Multisig does not replace seed strength; it changes **who must cooperate**. Example 2-of-3: an attacker needs **two** independent keys (or to compromise two devices/people), not one. Explain as layered control, with calm copy.
 
-## Amazon dice (affiliate-ready links; no claim of endorsement)
+## Amazon dice (ordinary product links; no claim of endorsement)
 - 5-pack example: https://www.amazon.com/dp/B00CKXGBE4 (Brybelly professional casino dice set of 5)
 - Alternate 5-pack: https://www.amazon.com/dp/B005OLV568
 Prefer linking a set of **5** (enough for base-6 entropy workflows) and note people often buy **two sets (10 dice)** for faster rolling. Do not invent other product claims.

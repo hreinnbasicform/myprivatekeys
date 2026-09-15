@@ -28,9 +28,10 @@ You can also open `index.html` directly in a browser. A local server is nicer so
 | `ssh.html` | Ed25519, passphrase, never share the private key, `authorized_keys` |
 | `bitcoin.html` | BIP39, dice entropy, checksum at a high level, write offline |
 | `multisig.html` | 2-of-3 as layered control, not a replacement for seed strength |
-| `dice.html` | Casino-style 5-pack Amazon links; people often buy two sets (10 dice) |
+| `dice.html` | Casino-style 5-pack Amazon product links; people often buy two sets (10 dice) |
+| `404.html` | Minimal not-found page with a home link and the process-only disclaimer |
 
-Shared styles live in `css/styles.css`. Optional nav toggle is `js/nav.js`. Illustrations are in `assets/`.
+Shared styles live in `css/styles.css`. Optional nav toggle is `js/nav.js`. Illustrations are in `assets/`. The site uses system fonts only — no third-party font or analytics requests. Amazon shopping links are ordinary `amazon.com/dp/…` URLs with `rel="nofollow noopener noreferrer"`.
 
 ## Magnitudes (plain language)
 
