@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSH &amp; systems private keys | myprivatekeys.com</title>
+  <meta name="description" content="Educational notes on SSH keys: Ed25519, passphrases, authorized_keys, and never sharing the private key. This site does not generate keys.">
+  <link rel="canonical" href="https://myprivatekeys.com/ssh.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="SSH &amp; systems private keys | myprivatekeys.com">
+  <meta property="og:description" content="Ed25519 practices, passphrases, and why the private key never leaves your machine. Process only — no key generation.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://myprivatekeys.com/ssh.html">
+  <meta property="og:image" content="https://myprivatekeys.com/assets/ssh-vs-bitcoin.png">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-disclaimer" role="note">
+    <p><strong>Teach process only.</strong> This site never generates SSH keys, Bitcoin seeds, or recovery phrases. Do not type a real private key or seed into any website — including this one.</p>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#e8e0d0"/>
+        <path d="M32 10c7 8 11 14 11 22a11 11 0 1 1-22 0c0-8 4-14 11-22z" fill="#6a7c61"/>
+        <circle cx="32" cy="32" r="4.2" fill="#faf6ee"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">myprivatekeys</span>
+        <span class="brand-tag">Education, not generation</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Entropy</a>
+      <a href="ssh.html" aria-current="page">SSH</a>
+      <a href="bitcoin.html">Bitcoin</a>
+      <a href="multisig.html">Multisig</a>
+      <a href="dice.html">Dice</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="kicker">Systems keys</p>
+        <h1>SSH keys are a pair. Only one half is public.</h1>
+        <p class="lede">An SSH key lets a computer recognize you without a reusable password. The private file stays on machines you trust. The public file is what you place on servers. This page describes that split. It will not create a key.</p>
+      </section>
+
+      <figure class="figure">
+        <img src="assets/ssh-vs-bitcoin.png" width="1600" height="900" alt="Side-by-side illustration contrasting SSH key pairs with Bitcoin seed phrases.">
+        <figcaption>SSH secrets and Bitcoin seeds are both private — they are used in different places and recovered in different ways.</figcaption>
+      </figure>
+
+      <section class="section">
+        <h2>What “good” looks like</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Prefer Ed25519</h3>
+            <p>On a current OpenSSH install, Ed25519 is the usual modern choice: short keys, strong defaults, widely supported. Generate it only on a computer you control, using the tools already on that machine — never a website form.</p>
+          </article>
+          <article class="card">
+            <h3>Protect it with a passphrase</h3>
+            <p>A passphrase encrypts the private key file at rest. If a laptop is copied, the thief still needs that phrase. Use a long, unique phrase you will not reuse as a website password.</p>
+          </article>
+          <article class="card">
+            <h3>Never share the private key</h3>
+            <p>Do not email it, paste it into chat, commit it to git, or upload it to a ticket. If someone else needs access, they make their own key and you accept their <em>public</em> key.</p>
+          </article>
+          <article class="card">
+            <h3>authorized_keys is the public half</h3>
+            <p>Servers keep a list of public keys (often in <code>authorized_keys</code>). That file is not a secret. Losing the public key is inconvenient; leaking the private key is a compromise.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Process, not a generator</h2>
+        <div class="prose">
+          <p>People typically create an SSH key locally, set a passphrase when prompted, keep the private file in a locked-down folder, and copy only the <code>.pub</code> line to each server or git host. Agent programs can hold the unlocked key in memory so you are not typing the passphrase every minute — that is still your machine, not a browser.</p>
+          <p>This site will not show a key, check a key, or run a generator. If you need a new pair, use the SSH software on an offline-enough, trusted computer and treat the private file like a house key you cannot reprint from this page.</p>
+        </div>
+        <blockquote class="pull">The public key is an ID badge. The private key is the badge-maker. Share the badge. Never share the maker.</blockquote>
+      </section>
+
+      <section class="section">
+        <h2>Everyday hygiene</h2>
+        <div class="prose">
+          <ul>
+            <li>One key per role or machine is easier to revoke than one key used everywhere.</li>
+            <li>Back up the private key you actually depend on — encrypted, offline — or you can lock yourself out.</li>
+            <li>If a private key might have leaked, stop using it and replace the public half on every server.</li>
+            <li>Do not confuse SSH keys with <a href="bitcoin.html">Bitcoin seed phrases</a>. An SSH key opens systems. A seed recovers a wallet. Neither should be typed into a website.</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="bitcoin.html">Bitcoin / BIP39</a>
+          <a class="btn btn-ghost" href="index.html">Back to entropy</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Disclaimer.</strong> myprivatekeys.com teaches intuition and process only. It does not create, store, validate, or recover private keys or seed phrases. Treat any website that offers to generate a key for you as unsafe.</p>
+      <p>© myprivatekeys.com · Educational static site.</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin multisig 2-of-3 | myprivatekeys.com</title>
+  <meta name="description" content="A calm explanation of 2-of-3 Bitcoin multisig: two keys must cooperate. Multisig layers control; it does not replace seed strength. No keys are generated here.">
+  <link rel="canonical" href="https://myprivatekeys.com/multisig.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Bitcoin multisig 2-of-3 | myprivatekeys.com">
+  <meta property="og:description" content="Two of three keys unlock together. Multisig changes who must cooperate; it does not replace entropy.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://myprivatekeys.com/multisig.html">
+  <meta property="og:image" content="https://myprivatekeys.com/assets/multisig-2of3.png">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-disclaimer" role="note">
+    <p><strong>Teach process only.</strong> This site never generates SSH keys, Bitcoin seeds, or recovery phrases. Do not type a real private key or seed into any website — including this one.</p>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#e8e0d0"/>
+        <path d="M32 10c7 8 11 14 11 22a11 11 0 1 1-22 0c0-8 4-14 11-22z" fill="#6a7c61"/>
+        <circle cx="32" cy="32" r="4.2" fill="#faf6ee"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">myprivatekeys</span>
+        <span class="brand-tag">Education, not generation</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Entropy</a>
+      <a href="ssh.html">SSH</a>
+      <a href="bitcoin.html">Bitcoin</a>
+      <a href="multisig.html" aria-current="page">Multisig</a>
+      <a href="dice.html">Dice</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="kicker">Layered control</p>
+        <h1>2-of-3 means two keys must agree.</h1>
+        <p class="lede">Multisig does not make one seed “bigger.” It changes the story of who must cooperate. In a 2-of-3 setup, any two of three keys can authorize a spend. One lost key is survivable. One stolen key is not enough.</p>
+      </section>
+
+      <figure class="figure">
+        <img src="assets/multisig-2of3.png" width="1600" height="900" alt="Illustration of a 2-of-3 multisig Bitcoin wallet: three keys, two of which are needed to open a lock.">
+        <figcaption>Two keys unlock together. You choose which two — and you keep them apart on purpose.</figcaption>
+      </figure>
+
+      <section class="section">
+        <h2>What changes, and what does not</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>No single key acts alone</h3>
+            <p>An attacker who compromises one device or one person still needs a second independent key. That is layered control, not a new entropy formula.</p>
+          </article>
+          <article class="card">
+            <h3>Shared or personal</h3>
+            <p>Families, teams, and organizations use 2-of-3 so no one person is a single point of failure. One person can also hold three keys in three places for the same reason.</p>
+          </article>
+          <article class="card">
+            <h3>Seeds still matter</h3>
+            <p>Each key in the quorum should still be created with strong entropy and stored the way you would store a <a href="bitcoin.html">BIP39 seed</a>. Weak keys do not become strong because they are counted in a group.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Odds, as intuition</h2>
+        <div class="prose">
+          <p>There is no single “multisig is N times safer” number that fits every household. The useful picture is: <strong>the attacker’s job becomes two independent problems</strong> (or two colluding people), instead of one. Losing one backup is also two independent problems — you still have two keys left.</p>
+          <p>That is why people separate the three keys: different rooms, different cities, different hardware, different people. Stacking all three keys in one drawer undoes the story.</p>
+        </div>
+        <blockquote class="pull">Multisig changes who must cooperate. It does not replace the size of the haystack behind each key.</blockquote>
+      </section>
+
+      <section class="section">
+        <h2>Calm process notes</h2>
+        <div class="prose">
+          <ul>
+            <li>Plan recovery before you need it: which two keys will you actually be able to reach?</li>
+            <li>Write down how the wallet is constructed (2-of-3, which devices) separately from the seeds themselves.</li>
+            <li>Never type any of the seeds into a website to “test” the quorum. This site will not assemble a wallet for you.</li>
+            <li>If you are still choosing phrase length, start with the <a href="index.html">entropy magnitudes</a> — 24 words is ~2<sup>128</sup>× a 12-word space, not twice as large.</li>
+          </ul>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="bitcoin.html">BIP39 notes</a>
+          <a class="btn btn-ghost" href="dice.html">Dice for entropy</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Disclaimer.</strong> myprivatekeys.com teaches intuition and process only. It does not create, store, validate, or recover private keys or seed phrases. Treat any website that offers to generate a seed for you as unsafe.</p>
+      <p>© myprivatekeys.com · Educational static site.</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

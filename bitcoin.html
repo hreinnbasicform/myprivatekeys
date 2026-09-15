@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin BIP39 seed phrases | myprivatekeys.com</title>
+  <meta name="description" content="Educational BIP39 notes: 2048-word list, 12 vs 24 word entropy, dice, checksums, and writing a seed offline. This site never generates a seed.">
+  <link rel="canonical" href="https://myprivatekeys.com/bitcoin.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Bitcoin BIP39 seed phrases | myprivatekeys.com">
+  <meta property="og:description" content="12-word ≈ 2^128; 24-word ≈ 2^256. 24 is about 2^128 times larger, not twice as large. Process only.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://myprivatekeys.com/bitcoin.html">
+  <meta property="og:image" content="https://myprivatekeys.com/assets/bip39-12-vs-24.png">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-disclaimer" role="note">
+    <p><strong>Teach process only.</strong> This site never generates SSH keys, Bitcoin seeds, or recovery phrases. Do not type a real private key or seed into any website — including this one.</p>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#e8e0d0"/>
+        <path d="M32 10c7 8 11 14 11 22a11 11 0 1 1-22 0c0-8 4-14 11-22z" fill="#6a7c61"/>
+        <circle cx="32" cy="32" r="4.2" fill="#faf6ee"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">myprivatekeys</span>
+        <span class="brand-tag">Education, not generation</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Entropy</a>
+      <a href="ssh.html">SSH</a>
+      <a href="bitcoin.html" aria-current="page">Bitcoin</a>
+      <a href="multisig.html">Multisig</a>
+      <a href="dice.html">Dice</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="kicker">BIP39</p>
+        <h1>A seed phrase is a huge number, written as words.</h1>
+        <p class="lede">BIP39 maps a long secret to words from a 2048-word list so a human can write it on paper. The security is in how that secret was chosen — and in never showing the words to a website. This page will not invent a phrase for you.</p>
+      </section>
+
+      <figure class="figure">
+        <img src="assets/bip39-12-vs-24.png" width="1600" height="900" alt="Illustration comparing 12-word and 24-word BIP39 seed phrase lengths and the much larger protection space of 24 words.">
+        <figcaption>More words are not “a bit safer.” Each extra bit doubles the search space. Prefer the numbers in the copy if a graphic’s tile count looks short.</figcaption>
+      </figure>
+
+      <section class="section">
+        <h2>The sizes that matter</h2>
+        <div class="prose">
+          <p>The English BIP39 list has <strong>2048 words</strong> (11 bits per word). A 12-word phrase carries about <strong>128 bits</strong> of entropy. A 24-word phrase carries about <strong>256 bits</strong>. Those are the same magnitudes as on the <a href="index.html">entropy page</a>.</p>
+        </div>
+        <div class="grid grid-2" style="margin-top: 1.4rem;">
+          <article class="stat">
+            <h3>12 words</h3>
+            <p class="num">≈ 2<sup>128</sup> ≈ 3.4×10<sup>38</sup></p>
+            <p class="sub">Already larger than a casual “sand × stars × cells” story.</p>
+          </article>
+          <article class="stat">
+            <h3>24 words</h3>
+            <p class="num">≈ 2<sup>256</sup> ≈ 1.2×10<sup>77</sup></p>
+            <p class="sub">About <strong>2<sup>128</sup>×</strong> more possibilities than 12 words — not 2×.</p>
+          </article>
+        </div>
+        <blockquote class="pull">Going from 12 to 24 words is not “twice as strong.” Adding 128 bits multiplies the haystack by about 2<sup>128</sup> (~10<sup>38</sup>×). That is another full 12-word universe.</blockquote>
+      </section>
+
+      <section class="section">
+        <h2>Checksum, in one breath</h2>
+        <div class="prose">
+          <p>Not every random list of 12 or 24 dictionary words is a valid BIP39 phrase. A small checksum is folded into the last word so wallets can catch a typo. That is a kindness for humans. It is not extra secrecy, and it is not something you should “fix” by typing words into a website to see if they check out.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Dice and offline entropy</h2>
+        <div class="prose">
+          <p>Some people gather randomness with physical dice before they use a wallet, so the secret does not begin life on a networked computer. Casino-style dice are popular because faces are easier to read and the dice are built to be fair. A <strong>5-pack</strong> is enough for base-6 workflows; people often buy <strong>two sets (10 dice)</strong> to roll faster.</p>
+          <p>This site does not convert rolls into words, does not host a wordlist picker, and does not verify a phrase. If you use dice, the mapping happens on tools and paper you already trust — offline — not in this browser.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="dice.html">Casino dice links</a>
+          <a class="btn btn-ghost" href="https://www.amazon.com/dp/B00CKXGBE4" rel="noopener noreferrer" target="_blank">Brybelly 5-pack</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Write it. Keep it offline. Never type it here.</h2>
+        <div class="prose">
+          <ul>
+            <li>Write the words on paper (or another lasting, offline medium) in a private room. Do not screenshot a live seed.</li>
+            <li>Never type a real seed into a website, “checker,” cloud note, email, or chat — including myprivatekeys.com.</li>
+            <li>Phishing pages impersonate wallets. If a page asks for your 12 or 24 words to “restore” or “validate,” it is trying to steal them.</li>
+            <li>A seed is the wallet. Anyone who sees it can move the coins. <a href="multisig.html">Multisig</a> changes how many seeds must agree; it does not make one leaked seed harmless if that seed is enough on its own.</li>
+          </ul>
+        </div>
+        <p class="note"><strong>No generator lives here.</strong> There is no form below this paragraph. If you came looking for a page that prints a seed, you are in the wrong place — on purpose.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Disclaimer.</strong> myprivatekeys.com teaches intuition and process only. It does not create, store, validate, or recover private keys or seed phrases. Treat any website that offers to generate a seed for you as unsafe.</p>
+      <p>© myprivatekeys.com · Educational static site.</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>
