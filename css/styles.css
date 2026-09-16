@@ -313,6 +313,7 @@ main {
   height: auto;
   background: #f7f3ea;
   object-fit: contain;
+  object-position: center;
 }
 
 .zeros-decimal {
