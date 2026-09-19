@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dice to BIP39, offline | myprivatekeys.com</title>
+  <meta name="description" content="How people use casino-style dice for offline entropy, and why BIP39 conversion stays air-gapped. SeedSigner is one example tool. This site does not turn rolls into keys.">
+  <link rel="canonical" href="https://myprivatekeys.com/dice.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Dice to BIP39, offline | myprivatekeys.com">
+  <meta property="og:description" content="Process only: how to roll dice privately, keep conversion air-gapped, and why websites must not map rolls to a seed.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://myprivatekeys.com/dice.html">
+  <meta property="og:image" content="https://myprivatekeys.com/assets/entropy-sand-scale.png">
+  <meta property="og:site_name" content="myprivatekeys.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f3eee4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Dice to BIP39, offline",
+    "url": "https://myprivatekeys.com/dice.html",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "myprivatekeys.com",
+      "url": "https://myprivatekeys.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-disclaimer" role="note">
+    <p><strong>Teach process only.</strong> This site never generates SSH keys, Bitcoin seeds, or recovery phrases. Dice links are shopping links, not a generator. Do not type a real seed into any website.</p>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="16" fill="#e8e0d0"/>
+        <path d="M32 10c7 8 11 14 11 22a11 11 0 1 1-22 0c0-8 4-14 11-22z" fill="#6a7c61"/>
+        <circle cx="32" cy="32" r="4.2" fill="#faf6ee"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">myprivatekeys</span>
+        <span class="brand-tag">Education, not generation</span>
+      </span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Entropy</a>
+      <a href="ssh.html">SSH</a>
+      <a href="bitcoin.html">Bitcoin</a>
+      <a href="multisig.html">Multisig</a>
+      <a href="dice.html" aria-current="page">Dice</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="kicker">Gear and process</p>
+        <h1>Casino-style dice, if you gather entropy by hand.</h1>
+        <p class="lede">Physical dice are one way people collect randomness away from a keyboard. A set of five is a common starting pack for base-6 workflows. People often buy two packs — ten dice — so each roll covers more ground. Buying dice does not create a key, and this page will not turn faces into words.</p>
+      </section>
+
+      <section class="section">
+        <h2>How to use the dice</h2>
+        <div class="prose">
+          <p>This is process, not a recipe that produces a seed on this site.</p>
+          <ul>
+            <li>Use casino-style dice with clear faces. A <strong>5-pack</strong> is a usual start; two packs (<strong>10 dice</strong>) make each throw cover more ground.</li>
+            <li>Roll in a <strong>private room</strong>. Treat the faces as secret numbers, the same way you would treat a seed.</li>
+            <li>Record each face carefully on paper. If you mis-copy a face, you have a different secret than the one you rolled.</li>
+            <li>Do not photograph rolls into a phone camera roll or cloud album. A picture of dice is a picture of entropy.</li>
+            <li>Do not type the faces, sums, or “dice codes” into a website — including this one.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Converting rolls to BIP39 — offline only</h2>
+        <div class="prose">
+          <p>Dice give you raw randomness. Turning that randomness into a BIP39 phrase is a mapping step. <strong>That mapping must happen on an offline device or other air-gapped workflow you already trust.</strong></p>
+          <p>myprivatekeys.com will not do it. There is no converter here, no wordlist picker, and no button that prints words. If a page in a browser offers to turn your rolls into a seed, close it.</p>
+          <p>The <a href="bitcoin.html">Bitcoin / BIP39 page</a> covers why 12 and 24 words differ in size, and why you write the finished phrase on paper — never into a website.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>One air-gapped example: SeedSigner</h2>
+        <div class="prose">
+          <p><a href="https://seedsigner.com/" rel="noopener noreferrer" target="_blank">SeedSigner</a> is an open-source, air-gapped Bitcoin signing project people build from off-the-shelf parts. Among other things, the official project describes creating a BIP39 seed from D6 dice rolls on the device itself — the rolls never need to go through a browser.</p>
+          <p>This is education, not an endorsement and not an affiliate link. Other offline tools exist. Use what you have already decided to trust, after your own review.</p>
+          <ul>
+            <li>Verify firmware and downloads from the <strong>official project</strong> (<a href="https://seedsigner.com/" rel="noopener noreferrer" target="_blank">seedsigner.com</a>), not from a random mirror or a chat-file.</li>
+            <li>Prefer air-gapped use: the usual SeedSigner story is a device without Wi‑Fi or Bluetooth, talking to a wallet with QR codes.</li>
+            <li>Never enter a seed into a browser, a phone “checker” app, or any site that offers to validate the words.</li>
+          </ul>
+        </div>
+        <p class="note"><strong>This site still will not generate a phrase.</strong> SeedSigner (or any other offline tool) lives on hardware you control. We only point at the official project so you know the name and the usual URL.</p>
+      </section>
+
+      <section class="section">
+        <h2>What not to use</h2>
+        <div class="prose">
+          <p>Skip random websites, browser extensions, and online “dice to seed” tools. They can see the rolls, invent words you did not choose, or both. A convenient tab is not an air gap.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Example 5-packs</h2>
+        <p class="muted tiny">Ordinary product links. No endorsement, no claim these are the only fair dice, no promise about current price or stock.</p>
+        <div class="grid grid-2 mt">
+          <article class="card product">
+            <p class="vendor">Brybelly · 5 dice</p>
+            <h3>Professional casino dice set of 5</h3>
+            <p>A straightforward 5-pack people point to for readable, casino-style dice.</p>
+            <a class="card-link" href="https://www.amazon.com/dp/B00CKXGBE4" rel="nofollow noopener noreferrer" target="_blank">Amazon: B00CKXGBE4</a>
+          </article>
+          <article class="card product">
+            <p class="vendor">Alternate · 5 dice</p>
+            <h3>Alternate casino-style 5-pack</h3>
+            <p>A second 5-pack listing if the first is out of stock or you want another option.</p>
+            <a class="card-link" href="https://www.amazon.com/dp/B005OLV568" rel="nofollow noopener noreferrer" target="_blank">Amazon: B005OLV568</a>
+          </article>
+        </div>
+        <p class="note mt"><strong>Two sets is a common shopping pattern.</strong> Ten dice are still just dice. They are not a wallet, and they do not need an account on this site.</p>
+      </section>
+
+      <section class="section">
+        <h2>What we will not do</h2>
+        <div class="prose">
+          <p>We will not invent other product claims, publish a roll-to-word converter, or accept a photo of dice “to generate a seed.” If you use dice as part of a <a href="bitcoin.html">BIP39</a> process, the mapping happens offline on tools you already trust. Never type the resulting words into this website — or any other.</p>
+          <p>Entropy size is still the story on the <a href="index.html">home page</a>: 12 words ≈ 2<sup>128</sup> ≈ 3.4×10<sup>38</sup>; 24 words ≈ 2<sup>256</sup> ≈ 1.2×10<sup>77</sup>; twenty-four is about 2<sup>128</sup> times larger than twelve, not twice as large.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="bitcoin.html">Back to BIP39</a>
+          <a class="btn btn-ghost" href="index.html">Scales of chance</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Disclaimer.</strong> myprivatekeys.com teaches intuition and process only. Product links are optional shopping references, not an endorsement. This site does not create, store, validate, or recover private keys or seed phrases.</p>
+      <p><strong>About / privacy.</strong> This is a static educational site. There are no accounts and no cookies. We never collect seeds or keys.</p>
+      <p>© myprivatekeys.com · Educational static site.</p>
+    </div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>
