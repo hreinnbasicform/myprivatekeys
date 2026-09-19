@@ -61,7 +61,7 @@ Teach the offline process on `dice.html`:
 
 ### Amazon dice (ordinary product links)
 
-No affiliate tags. No “affiliate-ready” copy. No claim of endorsement.
+Ordinary `amazon.com/dp/…` shopping links. No affiliate tags. No claim of endorsement.
 
 - 5-pack example: https://www.amazon.com/dp/B00CKXGBE4 (Brybelly professional casino dice set of 5)
 - Alternate 5-pack: https://www.amazon.com/dp/B005OLV568
